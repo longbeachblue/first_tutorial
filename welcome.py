@@ -1,4 +1,4 @@
-#welcome to longbeach
+#welcome
 
 '''
     *
@@ -7,3 +7,5 @@
  *     *
 *********
 '''
+
+
