@@ -28,5 +28,6 @@ def solution(n, lost, reserve):
                 reserve.remove(b)
                 #print("현재 reserve : {}".format(reserve))
                 answer = answer+1
+                break
 
     return answer
