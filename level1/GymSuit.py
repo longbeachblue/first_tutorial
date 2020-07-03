@@ -20,14 +20,14 @@
 '''
 def solution(n, lost, reserve):
     answer = 0
-    answer = n-len(lost)
-    #print(answer)
-    for a in lost:
-        for b in reserve:
-            if(a == b-1 or a == b+1 or a==b):
-                reserve.remove(b)
-                #print("현재 reserve : {}".format(reserve))
+    set_lost = set(lost)-set(reserve)
+    set_reserve = set(reserve)-set(lost) #중복되는 번호를 if 대신set로 처리하기
+    answer = n-len(set_lost)
+    for a in set_lost:
+        for b in set_reserve:
+            if(a == b-1 or a == b+1):
                 answer = answer+1
+                set_reserve.remove(b)
                 break
-
     return answer
+
